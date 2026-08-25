@@ -1,0 +1,51 @@
+<!-- ORDER FORM -->
+<section id="order">
+
+  <div class="title">
+    <h2>📝 Package Order Form</h2>
+    <p>আপোনাৰ তথ্য দি package order কৰক</p>
+  </div>
+
+  <div class="order-form">
+
+    <form onsubmit="sendOrder(event)">
+
+      <label>👤 Full Name</label>
+      <input type="text" id="name" placeholder="আপোনাৰ সম্পূৰ্ণ নাম" required>
+
+      <label>📞 Mobile Number</label>
+      <input type="tel" id="mobile" placeholder="10 digit mobile number" required>
+
+      <label>📧 Email (Optional)</label>
+      <input type="email" id="email" placeholder="your@email.com">
+
+      <label>📍 Address</label>
+      <textarea id="address" placeholder="আপোনাৰ Address লিখক" required></textarea>
+
+      <label>📦 Select Package</label>
+      <select id="package" required>
+        <option value="">-- Package Select কৰক --</option>
+        <option value="STARTER - ₹299">STARTER — ₹299</option>
+        <option value="PRO - ₹599">PRO — ₹599</option>
+        <option value="PREMIUM - ₹999">PREMIUM — ₹999</option>
+      </select>
+
+      <label>💳 Payment Status</label>
+      <select id="payment" required>
+        <option value="">-- Select Status --</option>
+        <option value="Payment Not Done">Payment Not Done</option>
+        <option value="Payment Done">Payment Done</option>
+      </select>
+
+      <label>📝 Message</label>
+      <textarea id="message" placeholder="আপোনাৰ কোনো বিশেষ কথা থাকিলে লিখক"></textarea>
+
+      <button type="submit">
+        📲 Submit Order on WhatsApp
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
