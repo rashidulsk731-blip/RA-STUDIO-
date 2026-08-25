@@ -1,0 +1,68 @@
+<script>
+
+function sendOrder(event){
+
+  event.preventDefault();
+
+  const name =
+    document.getElementById("name").value;
+
+  const mobile =
+    document.getElementById("mobile").value;
+
+  const email =
+    document.getElementById("email").value;
+
+  const address =
+    document.getElementById("address").value;
+
+  const packageName =
+    document.getElementById("package").value;
+
+  const payment =
+    document.getElementById("payment").value;
+
+  const message =
+    document.getElementById("message").value;
+
+
+  const text =
+`🌟 RA STUDIO — NEW PACKAGE ORDER
+
+👤 Customer Name: ${name}
+
+📞 Mobile: ${mobile}
+
+📧 Email: ${email || "Not Provided"}
+
+📍 Address:
+${address}
+
+📦 Selected Package:
+${packageName}
+
+💳 Payment Status:
+${payment}
+
+📝 Customer Message:
+${message || "No message"}
+
+━━━━━━━━━━━━━━
+
+🏢 RA STUDIO
+👤 Owner: Rashidul Sk
+📞 9387628351`;
+
+  const whatsappNumber = "919387628351";
+
+  const url =
+    "https://wa.me/" +
+    whatsappNumber +
+    "?text=" +
+    encodeURIComponent(text);
+
+  window.open(url, "_blank");
+
+}
+
+</script>
