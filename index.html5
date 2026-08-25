@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RA STUDIO | Online Work Learning</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#070707;
+  color:#fff;
+  line-height:1.6;
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(5,5,5,.95);
+  border-bottom:1px solid #292929;
+  padding:15px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size:25px;
+  font-weight:900;
+  color:#d4af37;
+  letter-spacing:2px;
+}
+
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:18px;
+  font-size:14px;
+}
+
+nav a:hover{
+  color:#d4af37;
+}
+
+.hero{
+  min-height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:70px 6%;
+  background:
+  radial-gradient(circle at top,#342b0c 0,#070707 45%);
+}
+
+.hero h1{
+  font-size:clamp(42px,8vw,80px);
+  color:#d4af37;
+  margin-bottom:10px;
+}
+
+.hero h2{
+  font-size:clamp(25px,5vw,45px);
+  margin-bottom:20px;
+}
+
+.hero p{
+  max-width:700px;
+  margin:auto;
+  color:#ccc;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:14px 28px;
+  border-radius:30px;
+  background:#d4af37;
+  color:#000;
+  text-decoration:none;
+  font-weight:bold;
+  margin-right:8px;
+}
+
+.btn.dark{
+  background:#171717;
+  color:#fff;
+  border:1px solid #d4af37;
+}
+
+section{
+  padding:70px 6%;
+}
+
+.title{
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.title h2{
+  color:#d4af37;
+  font-size:35px;
+}
+
+.title p{
+  color:#aaa;
+}
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+}
+
+.feature{
+  background:#111;
+  border:1px solid #292929;
+  border-radius:18px;
+  padding:25px;
+  text-align:center;
+  transition:.3s;
+}
+
+.feature:hover{
+  transform:translateY(-6px);
+  border-color:#d4af37;
+}
+
+.icon{
+  font-size:38px;
+  margin-bottom:10px;
+}
+
+.feature h3{
+  color:#d4af37;
+}
+
+.packages{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.card{
+  background:linear-gradient(145deg,#151515,#090909);
+  border:1px solid #333;
+  border-radius:22px;
+  padding:30px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.card.premium{
+  border:2px solid #d4af37;
+  transform:scale(1.03);
+}
+
+.badge{
+  position:absolute;
+  top:12px;
+  right:-35px;
+  background:#d4af37;
+  color:#000;
+  padding:5px 40px;
+  transform:rotate(35deg);
+  font-size:12px;
+  font-weight:bold;
+}
+
+.price{
+  font-size:42px;
+  color:#d4af37;
+  font-weight:bold;
+  margin:15px 0;
+}
+
+.card ul{
+  list-style:none;
+  text-align:left;
+  margin:20px 0;
+}
+
+.card li{
+  padding:7px 0;
+  color:#ddd;
+}
+
+.card li::before{
+  content:"✓ ";
+  color:#d4af37;
+  font-weight:bold;
+}
+
+.lessons{
+  max-width:850px;
+  margin:auto;
+}
+
+.lesson{
+  background:#111;
+  border:1px solid #292929;
+  border-radius:15px;
+  padding:20px;
+  margin:12px 0;
+}
+
+.lesson strong{
+  color:#d4af37;
+}
+
+.payment{
+  text-align:center;
+  background:linear-gradient(135deg,#17130a,#080808);
+}
+
+.qr{
+  width:230px;
+  max-width:80%;
+  background:#fff;
+  padding:10px;
+  border-radius:15px;
+  margin:20px auto;
+  display:block;
+}
+
+.contact-box{
+  max-width:600px;
+  margin:auto;
+  text-align:center;
+  background:#111;
+  border:1px solid #333;
+  border-radius:20px;
+  padding:35px;
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  background:#030303;
+  border-top:1px solid #222;
+  color:#999;
+}
+
+footer strong{
+  color:#d4af37;
+}
+
+@media(max-width:700px){
+  nav{
+    display:none;
+  }
+
+  .card.premium{
+    transform:none;
+  }
+
+  section{
+    padding:55px 5%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">RA STUDIO</div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#learn">Learn</a>
+    <a href="#packages">Packages</a>
+    <a href="#payment">Payment</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div>
+    <h1>RA STUDIO</h1>
+
+    <h2>Learn Skills. Start Online Work.</h2>
+
+    <p>
+      Mobile আৰু Computer ব্যৱহাৰ কৰি Online Work, Website Design,
+      Logo Design, Online Form Service আৰু Customer Finding শিকা।
+    </p>
+
+    <a class="btn" href="#packages">View Packages</a>
+    <a class="btn dark" href="#contact">Contact Now</a>
+  </div>
+</section>
+
+
+<!-- FEATURES -->
+<section id="learn">
+
+  <div class="title">
+    <h2>What You Will Learn</h2>
+    <p>Practical online work skills</p>
+  </div>
+
+  <div class="features">
+
+    <div class="feature">
+      <div class="icon">💻</div>
+      <h3>Online Work</h3>
+      <p>Online কামৰ basic concept আৰু practical workflow শিকা।</p>
+    </div>
+
+    <div class="feature">
+      <div class="icon">🌐</div>
+      <h3>Website Design</h3>
+      <p>Simple professional website বনোৱা আৰু customer order লোৱা।</p>
+    </div>
+
+    <div class="feature">
+      <div class="icon">🎨</div>
+      <h3>Logo Design</h3>
+      <p>Basic logo design আৰু customer-ৰ বাবে logo service দিয়া।</p>
+    </div>
+
+    <div class="feature">
+      <div class="icon">📝</div>
+      <h3>Online Form</h3>
+      <p>Online form service কেনেকৈ provide কৰিব লাগে শিকা।</p>
+    </div>
+
+    <div class="feature">
+      <div class="icon">📱</div>
+      <h3>Mobile Work</h3>
+      <p>Mobile-ৰ পৰা বিভিন্ন digital service manage কৰা।</p>
+    </div>
+
+    <div class="feature">
+      <div class="icon">📢</div>
+      <h3>Customer Finding</h3>
+      <p>Customer বিচৰা আৰু service order লোৱাৰ basic methods।</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- WORK FLOW -->
+<section>
+
+  <div class="title">
+    <h2>Online Work Flow</h2>
+    <p>Simple business process</p>
+  </div>
+
+  <div class="features">
+
+    <div class="feature">
+      <div class="icon">1️⃣</div>
+      <h3>Learn</h3>
+      <p>Skill শিকা</p>
+    </div>
+
+    <div class="feature">
+      <div class="icon">2️⃣</div>
+      <h3>Create</h3>
+      <p>Demo Work বনোৱা</p>
+    </div>
+
+    <div class="feature">
+      <div class="icon">3️⃣</div>
+      <h3>Find Customer</h3>
+      <p>Customer বিচৰা</p>
+    </div>
+
+    <div class="feature">
+      <div class="icon">4️⃣</div>
+      <h3>Take Order</h3>
+      <p>Order লোৱা</p>
+    </div>
+
+    <div class="feature">
+      <div class="icon">5️⃣</div>
+      <h3>Deliver</h3>
+      <p>Work Deliver কৰা</p>
+    </div>
+
+    <div class="feature">
+      <div class="icon">6️⃣</div>
+      <h3>Payment</h3>
+      <p>Payment গ্ৰহণ কৰা</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- LESSONS -->
+<section>
+
+  <div class="title">
+    <h2>Course Lessons</h2>
+    <p>Step-by-step practical learning</p>
+  </div>
+
+  <div class="lessons">
+
+    <div class="lesson">
+      <strong>Lesson 01</strong> — Online Work Basic
+    </div>
+
+    <div class="lesson">
+      <strong>Lesson 02</strong> — Mobile-ৰ পৰা Online Work
+    </div>
+
+    <div class="lesson">
+      <strong>Lesson 03</strong> — Website Design Basic
+    </div>
+
+    <div class="lesson">
+      <strong>Lesson 04</strong> — Demo Website বনোৱা
+    </div>
+
+    <div class="lesson">
+      <strong>Lesson 05</strong> — Logo Design Basic
+    </div>
+
+    <div class="lesson">
+      <strong>Lesson 06</strong> — Online Form Service
+    </div>
+
+    <div class="lesson">
+      <strong>Lesson 07</strong> — Customer বিচৰা
+    </div>
+
+    <div class="lesson">
+      <strong>Lesson 08</strong> — Order লোৱা আৰু Work Delivery
+    </div>
+
+    <div class="lesson">
+      <strong>Lesson 09</strong> — WhatsApp Marketing Basic
+    </div>
+
+    <div class="lesson">
+      <strong>Lesson 10</strong> — Online Service Business Setup
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PACKAGES -->
+<section id="packages">
+
+  <div class="title">
+    <h2>Choose Your Package</h2>
+    <p>Start learning with RA STUDIO</p>
+  </div>
+
+  <div class="packages">
+
+    <!-- STARTER -->
+    <div class="card">
+
+      <h2>STARTER</h2>
+
+      <div class="price">₹299</div>
+
+      <ul>
+        <li>Online Work Basic</li>
+        <li>Mobile Work Basic</li>
+        <li>Website Basic</li>
+        <li>Logo Design Basic</li>
+        <li>Customer Finding Basic</li>
+      </ul>
+
+      <a class="btn" href="#payment">Buy Now</a>
+
+    </div>
+
+
+    <!-- PRO -->
+    <div class="card">
+
+      <h2>PRO</h2>
+
+      <div class="price">₹599</div>
+
+      <ul>
+        <li>Starter Package</li>
+        <li>Website Design</li>
+        <li>Logo Design</li>
+        <li>Online Form Service</li>
+        <li>Customer Finding</li>
+        <li>Order → Delivery → Payment</li>
+      </ul>
+
+      <a class="btn" href="#payment">Buy Now</a>
+
+    </div>
+
+
+    <!-- PREMIUM -->
+    <div class="card premium">
+
+      <div class="badge">POPULAR</div>
+
+      <h2>PREMIUM</h2>
+
+      <div class="price">₹999</div>
+
+      <ul>
+        <li>Complete Online Work Training</li>
+        <li>Website Design</li>
+        <li>Logo Design</li>
+        <li>Online Form Service</li>
+        <li>Customer Finding</li>
+        <li>WhatsApp Marketing</li>
+        <li>Business Setup</li>
+        <li>Practical Projects</li>
+        <li>Lifetime Course Access</li>
+      </ul>
+
+      <a class="btn" href="#payment">Get Premium</a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PAYMENT -->
+<section class="payment" id="payment">
+
+  <div class="title">
+    <h2>Secure Payment</h2>
+    <p>Pay using PhonePe</p>
+  </div>
+
+  <p>
+    আপোনাৰ পছন্দৰ package select কৰি PhonePe-ৰ মাধ্যমে payment কৰিব পাৰিব।
+  </p>
+
+  <!-- Replace this image with your real PhonePe QR -->
+  <img
+    src="phonepe-qr.png"
+    alt="RA STUDIO PhonePe QR Code"
+    class="qr"
+  >
+
+  <h3>RA STUDIO</h3>
+  <p>Owner: Rashidul Sk</p>
+  <p>Mobile: 9387628351</p>
+
+  <a
+    class="btn"
+    href="https://wa.me/919387628351?text=Hello%20RA%20STUDIO%2C%20I%20want%20to%20join%20your%20Online%20Work%20Package."
+    target="_blank">
+    📲 Send Payment Screenshot
+  </a>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+
+  <div class="title">
+    <h2>Contact RA STUDIO</h2>
+    <p>For package information & support</p>
+  </div>
+
+  <div class="contact-box">
+
+    <h2>RA STUDIO</h2>
+
+    <p>👤 Owner: <strong>Rashidul Sk</strong></p>
+
+    <p>📞 Mobile:
+      <strong>9387628351</strong>
+    </p>
+
+    <p>
+      💬 WhatsApp-ত package information-ৰ বাবে contact কৰক।
+    </p>
+
+    <a
+      class="btn"
+      href="https://wa.me/919387628351"
+      target="_blank">
+      WhatsApp Now
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+  <p>
+    © 2026 <strong>RA STUDIO</strong> — Online Work Learning
+  </p>
+
+  <p>
+    Skills • Practice • Digital Services
+  </p>
+
+</footer>
+
+
+</body>
+  </html>
